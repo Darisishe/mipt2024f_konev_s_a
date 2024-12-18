@@ -1,0 +1,266 @@
+{
+    "_via_settings": {
+        "ui": {
+            "annotation_editor_height": 25,
+            "annotation_editor_fontsize": 0.8,
+            "leftsidebar_width": 18,
+            "image_grid": {
+                "img_height": 80,
+                "rshape_fill": "none",
+                "rshape_fill_opacity": 0.3,
+                "rshape_stroke": "yellow",
+                "rshape_stroke_width": 2,
+                "show_region_shape": true,
+                "show_image_policy": "all"
+            },
+            "image": {
+                "region_label": "__via_region_id__",
+                "region_color": "__via_default_region_color__",
+                "region_label_font": "10px Sans",
+                "on_image_annotation_editor_placement": "NEAR_REGION"
+            }
+        },
+        "core": {
+            "buffer_size": 18,
+            "filepath": {},
+            "default_filepath": ""
+        },
+        "project": {
+            "name": "annotations"
+        }
+    },
+    "_via_img_metadata": {
+        "qr-1.png7549": {
+            "filename": "qr-1.png",
+            "size": 7549,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            145,
+                            265,
+                            264,
+                            145
+                        ],
+                        "all_points_y": [
+                            164,
+                            165,
+                            45,
+                            44
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "qr",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "qr-2.png3680": {
+            "filename": "qr-2.png",
+            "size": 3680,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            10,
+                            260,
+                            261,
+                            9
+                        ],
+                        "all_points_y": [
+                            260,
+                            261,
+                            9,
+                            9
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "qr",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "qr-3.png1491": {
+            "filename": "qr-3.png",
+            "size": 1491,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            15,
+                            281,
+                            281,
+                            15
+                        ],
+                        "all_points_y": [
+                            281,
+                            282,
+                            15,
+                            15
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "qr",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "qr-4.png23881": {
+            "filename": "qr-4.png",
+            "size": 23881,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            37,
+                            990,
+                            988,
+                            37
+                        ],
+                        "all_points_y": [
+                            989,
+                            990,
+                            37,
+                            37
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "qr",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "qr-5.png3601": {
+            "filename": "qr-5.png",
+            "size": 3601,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            10,
+                            260,
+                            260,
+                            10
+                        ],
+                        "all_points_y": [
+                            260,
+                            260,
+                            9,
+                            10
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "qr",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        }
+    },
+    "_via_attributes": {
+        "region": {
+            "type": {
+                "type": "dropdown",
+                "description": "type of barcode",
+                "options": {
+                    "code_39": "",
+                    "ean_8": "",
+                    "ean_13": "",
+                    "ean_128": "",
+                    "interleaved_2_of_5": "",
+                    "upc_a": "",
+                    "upc_e": "",
+                    "aztec_code": "",
+                    "data_matrix": "",
+                    "maxi_code": "",
+                    "pdf_417": "",
+                    "qr": "",
+                    "databar_expanded_stacked": "",
+                    "generic1d": "",
+                    "generic2d": "",
+                    "generic_mixed": "",
+                    "databar_stacked": "",
+                    "databar_expanded": ""
+                },
+                "default_options": {
+                    "qr": true
+                }
+            },
+            "code integrity": {
+                "type": "dropdown",
+                "description": "code integrity",
+                "options": {
+                    "valid": "code is whole",
+                    "invalid": "code is cutten off",
+                    "unknown": "unknown"
+                },
+                "default_options": {}
+            }
+        },
+        "file": {
+            "caption": {
+                "type": "text",
+                "description": "",
+                "default_value": ""
+            },
+            "public_domain": {
+                "type": "radio",
+                "description": "",
+                "options": {
+                    "yes": "Yes",
+                    "no": "No"
+                },
+                "default_options": {
+                    "no": true
+                }
+            },
+            "image_url": {
+                "type": "text",
+                "description": "",
+                "default_value": ""
+            }
+        }
+    },
+    "_via_data_format_version": "2.0.10",
+    "_via_image_id_list": [
+        "qr-1.png7549",
+        "qr-2.png3680",
+        "qr-3.png1491",
+        "qr-4.png23881",
+        "qr-5.png3601"
+    ]
+}

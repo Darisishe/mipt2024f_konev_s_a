@@ -1,0 +1,266 @@
+{
+    "_via_settings": {
+        "ui": {
+            "annotation_editor_height": 25,
+            "annotation_editor_fontsize": 0.8,
+            "leftsidebar_width": 18,
+            "image_grid": {
+                "img_height": 80,
+                "rshape_fill": "none",
+                "rshape_fill_opacity": 0.3,
+                "rshape_stroke": "yellow",
+                "rshape_stroke_width": 2,
+                "show_region_shape": true,
+                "show_image_policy": "all"
+            },
+            "image": {
+                "region_label": "__via_region_id__",
+                "region_color": "__via_default_region_color__",
+                "region_label_font": "10px Sans",
+                "on_image_annotation_editor_placement": "NEAR_REGION"
+            }
+        },
+        "core": {
+            "buffer_size": 18,
+            "filepath": {},
+            "default_filepath": ""
+        },
+        "project": {
+            "name": "annotations"
+        }
+    },
+    "_via_img_metadata": {
+        "data_matrix-1.png1446": {
+            "filename": "data_matrix-1.png",
+            "size": 1446,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            10,
+                            391,
+                            391,
+                            10
+                        ],
+                        "all_points_y": [
+                            390,
+                            391,
+                            9,
+                            10
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "data_matrix",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "data_matrix-2.png2498": {
+            "filename": "data_matrix-2.png",
+            "size": 2498,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            46,
+                            447,
+                            447,
+                            46
+                        ],
+                        "all_points_y": [
+                            432,
+                            432,
+                            32,
+                            33
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "data_matrix",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "data_matrix-3.png4874": {
+            "filename": "data_matrix-3.png",
+            "size": 4874,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            66,
+                            466,
+                            466,
+                            66
+                        ],
+                        "all_points_y": [
+                            428,
+                            428,
+                            26,
+                            28
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "data_matrix",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "data_matrix-4.png3261": {
+            "filename": "data_matrix-4.png",
+            "size": 3261,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            46,
+                            445,
+                            445,
+                            46
+                        ],
+                        "all_points_y": [
+                            456,
+                            456,
+                            57,
+                            58
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "data_matrix",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        },
+        "data_matrix-5.png3203": {
+            "filename": "data_matrix-5.png",
+            "size": 3203,
+            "regions": [
+                {
+                    "shape_attributes": {
+                        "name": "polygon",
+                        "all_points_x": [
+                            42,
+                            442,
+                            441,
+                            42
+                        ],
+                        "all_points_y": [
+                            463,
+                            463,
+                            64,
+                            64
+                        ]
+                    },
+                    "region_attributes": {
+                        "type": "data_matrix",
+                        "code integrity": "valid"
+                    }
+                }
+            ],
+            "file_attributes": {
+                "caption": "",
+                "public_domain": "no",
+                "image_url": ""
+            }
+        }
+    },
+    "_via_attributes": {
+        "region": {
+            "type": {
+                "type": "dropdown",
+                "description": "type of barcode",
+                "options": {
+                    "code_39": "",
+                    "ean_8": "",
+                    "ean_13": "",
+                    "ean_128": "",
+                    "interleaved_2_of_5": "",
+                    "upc_a": "",
+                    "upc_e": "",
+                    "aztec_code": "",
+                    "data_matrix": "",
+                    "maxi_code": "",
+                    "pdf_417": "",
+                    "qr": "",
+                    "databar_expanded_stacked": "",
+                    "generic1d": "",
+                    "generic2d": "",
+                    "generic_mixed": "",
+                    "databar_stacked": "",
+                    "databar_expanded": ""
+                },
+                "default_options": {
+                    "data_matrix": true
+                }
+            },
+            "code integrity": {
+                "type": "dropdown",
+                "description": "code integrity",
+                "options": {
+                    "valid": "code is whole",
+                    "invalid": "code is cutten off",
+                    "unknown": "unknown"
+                },
+                "default_options": {}
+            }
+        },
+        "file": {
+            "caption": {
+                "type": "text",
+                "description": "",
+                "default_value": ""
+            },
+            "public_domain": {
+                "type": "radio",
+                "description": "",
+                "options": {
+                    "yes": "Yes",
+                    "no": "No"
+                },
+                "default_options": {
+                    "no": true
+                }
+            },
+            "image_url": {
+                "type": "text",
+                "description": "",
+                "default_value": ""
+            }
+        }
+    },
+    "_via_data_format_version": "2.0.10",
+    "_via_image_id_list": [
+        "data_matrix-1.png1446",
+        "data_matrix-2.png2498",
+        "data_matrix-3.png4874",
+        "data_matrix-4.png3261",
+        "data_matrix-5.png3203"
+    ]
+}
