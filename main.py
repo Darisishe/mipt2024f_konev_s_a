@@ -15,8 +15,9 @@ def main():
     Main function to run replacement function over dataset and synthetic barcodes
 
     Command-line arguments:
-    - -d, --data: Optional. The path to the directory with data (data/ by default).
+    - -d, --data: Optional. The path to the directory with data (data/ by default)
     - -s, --synthetic: Optional. The path to the directory with synthetic barcode for replacement (synthetic/ by default)
+    - -o, --output: Optional. The to the directory where to save results (output/ by default)
     - --no-autocolor: Optional. Tells program to use NO_AUTOCOLOR mode for replacement (by default AUTOCOLOR is used)
     """
 
@@ -71,7 +72,6 @@ def main():
     )
 
     for base_image, base_polygon, barcode_type, region_id in data:
-        print(base_image)
         for new_image, new_polygon, _, _ in synthetic[barcode_type]:
             seamless_result = replacement.seamless_replace(
                 cv2.imread(base_image),

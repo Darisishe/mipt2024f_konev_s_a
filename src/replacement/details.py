@@ -24,7 +24,7 @@ def blur_kernel_size(polygon):
     """
 
     average_dim = average_side_len(polygon)
-    kernel_size = max(1, int(average_dim * 0.01) | 1)  # At least 1 and odd
+    kernel_size = max(3, int(average_dim * 0.05) | 1)  # At least 3 and odd
 
     return kernel_size
 
@@ -43,8 +43,8 @@ def dilation_kernel(polygon):
     average_dim = average_side_len(polygon)
 
     # Define kernel size as a fraction of the average side length
-    # Fraction value was choosen empirically (about 1%)
-    kernel_size = max(1, int(average_dim * 0.01))
+    # Fraction value was choosen empirically (about 3%)
+    kernel_size = max(3, int(average_dim * 0.03) | 1)
     return np.ones((kernel_size, kernel_size), np.uint8)
 
 
@@ -72,7 +72,7 @@ def create_expanded_mask(image, polygon):
     return cv2.GaussianBlur(expanded_mask, (kernel_size, kernel_size), 0)
 
 
-def get_background_and_foreground(image, polygon):
+def get_background_and_foreground(image, polygon, is_synthetic=False):
     """
     Extracts foreground and background masks from a region.
 
@@ -106,6 +106,10 @@ def get_background_and_foreground(image, polygon):
     ):
         background_mask, foreground_mask = foreground_mask, background_mask
 
+    if is_synthetic:
+        # For synthetic barcode we will recolor full background
+        # (it's needed so mask expansion will be correct during seamlessClone)
+        background_mask = background_mask | (mask == 0)
     return background_mask, foreground_mask
 
 
@@ -136,7 +140,7 @@ def extract_colors(image, polygon):
 def recolor_barcode(image, polygon, background_color, foreground_color):
     """
     Recolors barcode on image to a given color scheme.
-    It's better for image to be without noise, shadows, etc.
+    image must be without noise, shadows, etc.
     (i.e. image should be synthetic, model etc.)
     It's needed so found masks would be more accurate
 
@@ -150,21 +154,21 @@ def recolor_barcode(image, polygon, background_color, foreground_color):
         ndarray: New image of barcode with new colors
     """
 
-    background_mask, foreground_mask = get_background_and_foreground(image, polygon)
+    background_mask, foreground_mask = get_background_and_foreground(image, polygon, is_synthetic=True)
     recolored = image.copy()
 
     background_color = np.array(background_color, dtype=np.uint8)
     foreground_color = np.array(foreground_color, dtype=np.uint8)
     recolored[background_mask] = background_color
     recolored[foreground_mask] = foreground_color
-
+    
     return recolored
 
 
 def correct_colors(base_image, base_polygon, new_image, new_polygon):
     """
     Recolors barcode on new_image to a color scheme of base_image's barcode.
-    It's better for image to be without noise, shadows, etc.
+    new_image must be without noise, shadows, etc.
     (i.e. image should be synthetic, model etc.)
     It's needed so found masks would be more accurate
 
